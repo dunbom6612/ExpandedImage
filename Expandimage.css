@@ -1,0 +1,89 @@
+html {
+  font-size: 62.5%;
+  font-family: "Poppin", sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.expand-container {
+  display: flex;
+  width: 90vw;
+}
+.expand-pannel {
+  margin: 1.5rem;
+  border-radius: 5rem;
+  height: 60rem;
+  width: 5rem;
+  transition:  0.75s ease-in;
+  position: relative;
+  flex: 0.5;
+}
+.expand-pannel:nth-child(1) {
+  background-image: url(https://images.unsplash.com/photo-1604000116947-5d6dcee85a0a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNlYXNvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60) ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.expand-pannel:nth-child(2) {
+  background-image: url(https://images.unsplash.com/photo-1605265536375-622ec6325c0d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8c2Vhc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+.expand-pannel:nth-child(3) {
+  background-image: url(https://images.unsplash.com/photo-1576071885471-1a354fc561c3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHNlYXNvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+.expand-pannel:nth-child(4) {
+  background: url(https://images.unsplash.com/photo-1620234912926-d35b5f9d0be0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHNlYXNvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60)
+    no-repeat center / cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ 
+}
+.expand-pannel:nth-child(5) {
+  background-image: url(https://images.unsplash.com/photo-1615591499497-cb296fee844a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHNlYXNvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.expand-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-transform: capitalize;
+  transform: translate(100%,-100%);
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+  opacity: 0;
+}
+
+.expand-pannel.active {
+  flex: 4;
+}
+
+
+.expand-pannel.active .expand-title{
+  opacity: 1;  
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width : 480px){
+  .pannel:nth-of-type(3),
+  .pannel:nth-of-type(4),
+  .pannel:nth-of-type(5){
+    display: none;
+  }
+}
+
